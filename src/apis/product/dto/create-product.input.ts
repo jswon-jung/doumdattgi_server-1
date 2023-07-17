@@ -42,6 +42,16 @@ export class CreateProductInput {
   product_endTime: number;
 
   @Field(() => [Thumbnail], { nullable: true })
+  
+  @Field(() => String, { nullable: true })
+  product_minAmount?: string;
+
+  @Field(() => String, { nullable: true })
+  product_possibleAmount?: string;
+
+  @Field(() => String, { nullable: true })
+  product_date?: string;
+
   product_thumbnailImage: Thumbnail[];
 
   @Field(() => String, { nullable: true })
