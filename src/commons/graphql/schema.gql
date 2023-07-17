@@ -18,7 +18,7 @@ type Pick {
 type Product {
   product_id: String!
   user: User!
-  images: [Image!]!
+  images: [Image!]
   pick: [Pick!]!
   product_title: String!
   product_category: PRODUCT_CATEGORY_ENUM!
@@ -333,7 +333,7 @@ input CreateProductInput {
   product_workTime: Int!
   product_startTime: Int!
   product_endTime: Int!
-  product_thumbnailImage: [Thumbnail!]!
+  product_thumbnailImage: [Thumbnail!]
   product_postNum: String
   product_roadAddress: String
   product_detailAddress: String

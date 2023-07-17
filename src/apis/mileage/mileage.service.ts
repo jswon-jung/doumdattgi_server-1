@@ -8,12 +8,14 @@ import {
 } from './entities/mileage.entity';
 import {
   IMileagesServiceMileageHistory,
+  IMileagesServiceMileageProduct,
   IMileagesServicePurchaseCoupon,
   IMileagesServiceUpdateMileage,
 } from './interfaces/mileage-service.interface';
 import { User } from '../users/entities/user.entity';
 import { UsersService } from '../users/users.service';
 import { Product } from '../product/entites/product.entity';
+import { mileageProductOutput } from './dto/mileage-product.output';
 
 @Injectable()
 export class MileagesService {
@@ -119,4 +121,21 @@ export class MileagesService {
     );
     return result ? true : false;
   }
+
+  // 유저 마일리지 목록 페이지 조회 함수
+  // async mileageProduct({
+  //   context,
+  // }: IMileagesServiceMileageProduct): Promise<mileageProductOutput[]> {
+  //   const user_id = context.req.user.user_id;
+  //   // image_url, product_title, product_summary, mileage_createdAt, mileage_coupon
+  //   const product = await this.productsRepository.find({
+  //     where: { user: { user_id } },
+  //     relations: ['mileage'],
+  //   });
+
+  //   const result = [];
+  //   for (let i = 0; i < product.length; i++) {
+  //     if (product[i].mileage.mileage_id) result.push(product[i]);
+  //   }
+  // }
 }

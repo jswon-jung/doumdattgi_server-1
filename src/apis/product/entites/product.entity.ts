@@ -50,7 +50,7 @@ export class Product {
   user: User;
 
   @OneToMany(() => Image, (image) => image.product)
-  @Field(() => [Image])
+  @Field(() => [Image], { nullable: true })
   images: Image[];
 
   @OneToMany(() => Pick, (pick) => pick.product)

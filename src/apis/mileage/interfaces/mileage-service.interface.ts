@@ -15,3 +15,7 @@ export interface IMileagesServicePurchaseCoupon {
   coupon: string;
   productId: string;
 }
+
+export interface IMileagesServiceMileageProduct {
+  context: IContext;
+}

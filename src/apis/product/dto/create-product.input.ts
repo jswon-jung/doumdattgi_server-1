@@ -41,7 +41,7 @@ export class CreateProductInput {
   @Field(() => Int)
   product_endTime: number;
 
-  @Field(() => [Thumbnail])
+  @Field(() => [Thumbnail], { nullable: true })
   product_thumbnailImage: Thumbnail[];
 
   @Field(() => String, { nullable: true })
